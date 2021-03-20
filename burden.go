@@ -44,7 +44,6 @@ func main() {
 
 	// Declare program flags
 	loadUsersPtr := flag.Int("loadusers", 10, "Number of users to simulate in a load test.")
-	loadTimePtr := flag.String("loadtime", "1m", "Duration of load test. Possible times include 5m, 10s, 1hr, etc.")
 	httpEndpointPtr := flag.String("httpendpoint", "", "HTTP endpoint to test. No default value.")
 
 	// Parse flags
@@ -62,12 +61,6 @@ func main() {
 		fmt.Println("--loadusers not set, using default value of " + strconv.Itoa(*loadUsersPtr))
 	} else {
 		fmt.Println("--loadusers set to " + strconv.Itoa(*loadUsersPtr))
-	}
-
-	if isFlagPassed("loadtime") == false {
-		fmt.Println("--loadtime not set, using default value of " + *loadTimePtr)
-	} else {
-		fmt.Println("--loadtime set to " + *loadTimePtr)
 	}
 
 	response := loadTest(*loadUsersPtr, *httpEndpointPtr)
