@@ -10,7 +10,7 @@
 Burden is an automated Application Performance Testing tool for load, stress, spike and endurance testing.
 
 ## Example of testing localhost web application deployed on Tomcat
-
+```
 PS C:\burden> .\burden.exe --httpendpoint http://localhost:8080/market --loadusers 100000
 
       ..-::::::-..
@@ -47,3 +47,4 @@ The HTTP request failed with error Get http://localhost:8080/market: dial tcp [:
 The HTTP request failed with error Get http://localhost:8080/market: dial tcp [::1]:8080: bind: An operation on a socket could not be performed because the system lacked sufficient buffer space or because a queue was full.
 The HTTP request failed with error Get http://localhost:8080/market: dial tcp [::1]:8080: bind: An operation on a socket could not be performed because the system lacked sufficient buffer space or because a queue was full.
 The HTTP request failed with error Get http://localhost:8080/market: dial tcp [::1]:8080: bind: An operation on a socket could not be performed because the system lacked sufficient buffer space or because a queue was full.
+```
